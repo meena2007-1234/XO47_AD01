@@ -71,6 +71,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
+  transition: background 0.2s ease;
 }
 
 button:hover {
@@ -107,10 +108,91 @@ input:focus {
 }
 
 .status {
-  margin: 25px 0;
+  margin: 20px 0 10px;
   padding: 15px;
-  background: #e7f7ec;
-  color: #167542;
   border-radius: 10px;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Status variants */
+.status-safe {
+  background: #e7f7ec;
+  color: #167542;
+}
+
+.status-warning {
+  background: #ffebee;
+  color: #c62828;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* ========================================= */
+/* CP2 & CP3: CAMERA & CANVAS OVERLAY STYLES */
+/* ========================================= */
+
+.camera-card {
+  max-width: 500px;
+}
+
+.camera-box {
+  width: 100%;
+  min-height: 280px;
+  background: #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scaleX(-1); /* Flips camera and detection canvas together */
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+  display: block;
+}
+
+.overlay-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.error-message {
+  color: #d9534f;
+  background: #fdf2f2;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 10px;
+  border: 1px solid #f5c6cb;
+}
+.blur-screen video,
+.blur-screen canvas {
+  filter: blur(15px);
+  transition: filter 0.2s ease-in-out;
 }
