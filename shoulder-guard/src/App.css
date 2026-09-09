@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f8f4;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: #173d29;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 45px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.shield {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #146b3a;
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #66756c;
+  margin: 10px 0 25px;
+  font-size: 18px;
+}
+
+.description {
+  color: #68776e;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+button {
+  width: 100%;
+  background: #167542;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #0f5c32;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border: 1px solid #ccd8d0;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #167542;
+}
+
+.small-text {
+  margin-top: 18px;
+  color: #7a857e;
+  font-size: 13px;
+}
+
+.privacy {
+  margin-top: 25px;
+  padding: 12px;
+  background: #fff9df;
+  border-radius: 10px;
+  color: #655a32;
+  font-size: 14px;
+}
+
+.status {
+  margin: 25px 0;
+  padding: 15px;
+  background: #e7f7ec;
+  color: #167542;
+  border-radius: 10px;
+  font-weight: bold;
+}
